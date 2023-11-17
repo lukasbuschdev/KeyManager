@@ -1,3 +1,13 @@
+const log = console.log;
+
+const error = console.error;
+
+const trace = console.trace;
+
+const $ = (selector) => document.querySelector(selector);
+
+const $$ = (selector) => document.querySelectorAll(selector);
+
 function loadHeader() {
     const headerContainer = $('#headerContainer');
 
@@ -9,19 +19,19 @@ function loadHeader() {
             </div>
             <nav class="gap-35">
                 <button class="">
-                    <a href="#">HOME</a>
+                    <a href="/index/home/home.html">HOME</a>
                 </button>
 
                 <button class="">
-                    <a href="#">KEYS</a>
+                    <a href="/index/keys/keys.html">KEYS</a>
                 </button>
 
                 <button class="">
-                    <a href="#">CONTACT</a>
+                    <a href="/index/contact/contact.html">CONTACT</a>
                 </button>
 
                 <button class="">
-                    <a href="#">ACCOUNT</a>
+                    <a href="/index/account/account.html">ACCOUNT</a>
                 </button>
             </nav>
         </header>
