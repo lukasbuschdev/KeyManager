@@ -1,0 +1,59 @@
+header {
+    height: 120px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 30px;
+}
+
+.logo-title {
+    height: 100%;
+    width: fit-content;
+    display: flex;
+    align-items: center;
+}
+
+.logo-title img {
+    height: 80px;
+    width: 80px;
+    border-radius: 999px;
+}
+
+.logo-title span {
+    color: var(--clr-dark);
+}
+
+nav {
+    display: flex;
+}
+
+nav button a {
+    color: var(--clr-dark);
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+nav button a:hover {
+    color: var(--clr-blue);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+footer {
+    height: 100px;
+    width: 100%;
+}
