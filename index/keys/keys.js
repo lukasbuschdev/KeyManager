@@ -79,10 +79,15 @@ function getInputs() {
     const platformInput = $('#platform-input').value;
     const generatedKey = $('#keyGenerator').value;
 
-    log(mailInput);
-    log(usernameInput);
-    log(platformInput);
-    log(generatedKey);
+
+    const dataset = {
+        mail: mailInput,
+        username: usernameInput,
+        platform: platformInput,
+        key: generatedKey
+    };
+
+    log(dataset)
 }
 
 function saveKey() {
