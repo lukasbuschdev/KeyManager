@@ -1,4 +1,4 @@
-export class User {
+class User {
     constructor(username, email, password) {
         this.username = username;
         this.email = email;
@@ -6,6 +6,6 @@ export class User {
     }
 
     displayInfo() {
-        console.log(`Username: ${this.username}, Email: ${this.email}, Password: ${this.password}`);
+        log(`Username: ${this.username}, Email: ${this.email}, Password: ${this.password}`);
     }
 }
