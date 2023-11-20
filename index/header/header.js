@@ -16,9 +16,9 @@ function loadHeader() {
                     <a href="/index/keys/keys.html">KEYS</a>
                 </button>
 
-                <button class="">
+                <!-- <button class="">
                     <a href="/index/contact/contact.html">CONTACT</a>
-                </button>
+                </button> -->
 
                 <button class="">
                     <a href="/index/account/account.html">ACCOUNT</a>
