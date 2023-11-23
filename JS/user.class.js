@@ -5,7 +5,7 @@ class User {
         this.password = password;
     }
 
-    displayInfo() {
-        log(`Username: ${this.username}, Email: ${this.email}, Password: ${this.password}`);
-    }
+    // getUserData() {
+    //     log(`Username: ${this.username}, Email: ${this.email}, Password: ${this.password}`);
+    // }
 }

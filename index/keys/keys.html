@@ -10,16 +10,33 @@
     <link rel="stylesheet" href="/index/header/header.css">
     <link rel="stylesheet" href="/index/footer/footer.css">
 
-    <script src="/JS/setup.js"></script>
-    <script src="/index/header/header.js"></script>
+    <script src="/JS/utilities.js"></script>
     <script src="/index/footer/footer.js"></script>
     <script src="/index/keys/keys.js"></script>
     <script src="/JS/user.class.js"></script>
+    <script src="/index/header/header.js"></script>
+    <script src="/JS/setup.js"></script>
 </head>
-<body onload="loadHeader(), loadFooter()">
+<body onload="init()">
     <div id="headerContainer"></div>
 
-    <div id="content"></div>
+
+
+
+
+    <div id="content" class="row">
+        <div class="keysNav column gap-30">
+            <button onclick="loadSavedKeys()" class="btn-light">Saved Keys</button>
+            <button onclick="loadKeyGenerator()" class="btn-light">Key Generator</button>
+        </div>
+
+        <div id="contentContainer" class="column"></div>
+    </div>
+
+
+
+
+
 
     <div id="footerContainer"></div>    
 </body>
