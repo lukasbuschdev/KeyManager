@@ -1,5 +1,3 @@
-const charset = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstufwxyz0123456789=/?!%()-$'
-
 function loadSavedKeys() {
     const savedKeysContainer = $('#contentContainer');
     savedKeysContainer.innerHTML = '';
@@ -87,9 +85,16 @@ function getInputs() {
         key: generatedKey
     };
 
-    log(dataset)
+    // log(dataset)
 }
 
 function saveKey() {
     getInputs();
+    pool.query(`select * from dataset`, (err, result, fields) => {
+        if(err) return console.log(err);
+        
+        console.log(result);
+        return
+    });
 }
+
