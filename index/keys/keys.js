@@ -1,3 +1,5 @@
+const SERVER_URL = "http://localhost:3000";
+
 function loadSavedKeys() {
     const savedKeysContainer = $('#contentContainer');
     savedKeysContainer.innerHTML = '';
@@ -72,29 +74,34 @@ function generateKey() {
 }
 
 function getInputs() {
-    const mailInput = $('#mail-input').value;
-    const usernameInput = $('#username-input').value;
-    const platformInput = $('#platform-input').value;
-    const generatedKey = $('#keyGenerator').value;
-
-
-    const dataset = {
-        mail: mailInput,
-        username: usernameInput,
-        platform: platformInput,
-        key: generatedKey
+    return {
+        mail: $('#mail-input').value,
+        username: $('#username-input').value,
+        platform: $('#platform-input').value,
+        key: $('#keyGenerator').value
     };
-
-    // log(dataset)
 }
 
-function saveKey() {
-    getInputs();
-    pool.query(`select * from dataset`, (err, result, fields) => {
-        if(err) return console.log(err);
-        
-        console.log(result);
-        return
+async function saveKey() {
+    const dataset = getInputs();
+    const res = await UPLOAD_SERVER(dataset);
+    const upload_Response = res.json();
+    console.log(upload_Response);
+}
+
+async function GET_ALL_KEYS() {
+    const allKeys = await GET_SERVERDATA();
+    console.log(allKeys);
+}
+
+function UPLOAD_SERVER(dataset) {
+    return fetch(SERVER_URL, {
+        method: 'POST',
+        body: JSON.stringify(dataset)
     });
-}
+} 
 
+async function GET_SERVERDATA() {
+    const res = await fetch(SERVER_URL);
+    return res.json();
+}
